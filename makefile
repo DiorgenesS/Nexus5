@@ -19,7 +19,7 @@ local-modified-apps :=
 local-modified-jars := 
 
 # All apks from MIUI
-local-miui-removed-apps := FM WebViewGoogle
+local-miui-removed-apps := BugReport FM GameCenter MiGameCenterSDKService MiLivetalk Mipay MiuiSuperMarket MiuiVideo MiuiVoip QuickSearchBox SogouInput SystemAdSolution VoiceAssist WebViewGoogle XiaomiVip XMPass
 
 local-miui-modified-apps := 
 
@@ -53,3 +53,13 @@ include $(PORT_BUILD)/porting.mk
 #updater := $(ZIP_DIR)/META-INF/com/google/android/updater-script
 #pre_install_data_packages := $(TMP_DIR)/pre_install_apk_pkgname.txt
 local-pre-zip-misc:
+	@echo remove unnecessary libs!
+	rm -rf $(ZIP_DIR)/system/lib64
+	rm -rf $(ZIP_DIR)/system/lib/libDecRes_sdk.so
+	rm -rf $(ZIP_DIR)/system/lib/libminivenus.so
+	rm -rf $(ZIP_DIR)/system/lib/libmresearch.so
+	rm -rf $(ZIP_DIR)/system/lib/libsecurities_sdk.so
+	rm -rf $(ZIP_DIR)/system/lib/libwebp.so
+	rm -rf $(ZIP_DIR)/system/lib/libweibosdkcore_sogou.so
+	rm -rf $(ZIP_DIR)/system/lib/libxmpass_sdk_patcher.so
+	rm -rf $(ZIP_DIR)/system/lib/xmpass_libweibosdkcore.so
