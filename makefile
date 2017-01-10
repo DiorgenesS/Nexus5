@@ -54,20 +54,20 @@ include $(PORT_BUILD)/porting.mk
 #pre_install_data_packages := $(TMP_DIR)/pre_install_apk_pkgname.txt
 local-pre-zip-misc:
 	@echo copying files!
-	cp -rf other/system $(ZIP_DIR)/
+	$(hide) cp -rf other/system $(ZIP_DIR)/
 	@echo remove unnecessary libs!
-	rm -rf $(ZIP_DIR)/system/lib64
-	rm -rf $(ZIP_DIR)/system/lib/libDecRes_sdk.so
-	rm -rf $(ZIP_DIR)/system/lib/libminivenus.so
-	rm -rf $(ZIP_DIR)/system/lib/libmresearch.so
-	rm -rf $(ZIP_DIR)/system/lib/libsecurities_sdk.so
-	rm -rf $(ZIP_DIR)/system/lib/libwebp.so
-	rm -rf $(ZIP_DIR)/system/lib/libweibosdkcore_sogou.so
-	rm -rf $(ZIP_DIR)/system/lib/libxmpass_sdk_patcher.so
-	rm -rf $(ZIP_DIR)/system/lib/xmpass_libweibosdkcore.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib64
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libDecRes_sdk.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libminivenus.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libmresearch.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libsecurities_sdk.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libwebp.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libweibosdkcore_sogou.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libxmpass_sdk_patcher.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/xmpass_libweibosdkcore.so
 	@echo remove unnecessary files!
-	rm -rf $(ZIP_DIR)/system/recovery-from-boot.p
-	rm -rf $(ZIP_DIR)/system/media/audio/*
+	$(hide) rm -rf $(ZIP_DIR)/system/recovery-from-boot.p
+	$(hide) rm -rf $(ZIP_DIR)/system/media/audio/*
 	@echo use only miui sounds!
-	cp -rf $(PORT_ROOT)/miui/system/media/$(local-density)/audio/* $(ZIP_DIR)/system/media/audio
-	rm -rf $(ZIP_DIR)/system/media/audio/create_symlink_for_audio-timestamp
+	$(hide) cp -rf $(PORT_ROOT)/miui/system/media/$(local-density)/audio/* $(ZIP_DIR)/system/media/audio
+	$(hide) rm -rf $(ZIP_DIR)/system/media/audio/create_symlink_for_audio-timestamp
