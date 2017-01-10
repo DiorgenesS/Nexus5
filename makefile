@@ -53,6 +53,8 @@ include $(PORT_BUILD)/porting.mk
 #updater := $(ZIP_DIR)/META-INF/com/google/android/updater-script
 #pre_install_data_packages := $(TMP_DIR)/pre_install_apk_pkgname.txt
 local-pre-zip-misc:
+	@echo copying files!
+	cp -rf other/system $(ZIP_DIR)/
 	@echo remove unnecessary libs!
 	rm -rf $(ZIP_DIR)/system/lib64
 	rm -rf $(ZIP_DIR)/system/lib/libDecRes_sdk.so
