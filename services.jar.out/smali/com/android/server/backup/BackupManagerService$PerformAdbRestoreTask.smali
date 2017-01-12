@@ -5730,20 +5730,6 @@
     .local v44, "toCopy":J
     move-object/from16 v0, p0
 
-    const/4 v4, 0x0
-
-    iget-object v5, v0, Lcom/android/server/backup/BackupManagerService$PerformAdbRestoreTask;->mAgent:Landroid/app/IBackupAgent;
-
-    move/from16 v0, v16
-
-    invoke-static {v5, v0}, Lcom/android/server/backup/BackupManagerServiceInjector;->needUpdateToken(Landroid/app/IBackupAgent;I)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_e
-
-    move-object/from16 v0, p0
-
     iget-object v5, v0, Lcom/android/server/backup/BackupManagerService$PerformAdbRestoreTask;->this$0:Lcom/android/server/backup/BackupManagerService;
 
     invoke-virtual {v5}, Lcom/android/server/backup/BackupManagerService;->generateToken()I
@@ -5984,6 +5970,20 @@
     invoke-virtual {v0, v8, v9, v1}, Lcom/android/server/backup/BackupManagerService$PerformAdbRestoreTask;->skipTarPadding(JLjava/io/InputStream;)V
 
     .line 6362
+    move-object/from16 v0, p0
+
+    const/4 v4, 0x0
+
+    iget-object v5, v0, Lcom/android/server/backup/BackupManagerService$PerformAdbRestoreTask;->mAgent:Landroid/app/IBackupAgent;
+
+    move/from16 v0, v16
+
+    invoke-static {v5, v0}, Lcom/android/server/backup/BackupManagerServiceInjector;->needUpdateToken(Landroid/app/IBackupAgent;I)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_e
+
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lcom/android/server/backup/BackupManagerService$PerformAdbRestoreTask;->this$0:Lcom/android/server/backup/BackupManagerService;
