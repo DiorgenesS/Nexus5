@@ -437,7 +437,7 @@ system/etc/permissions/android.software.webview.xml 0 0 644 selabel=u:object_r:s
 system/etc/permissions/com.android.location.provider.xml 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/etc/permissions/com.android.media.remotedisplay.xml 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/etc/permissions/com.android.mediadrm.signer.xml 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/etc/permissions/com.google.android.camera2.xml 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/etc/permissions/com.google.android.camera.experimental2015.xml 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/etc/permissions/com.google.android.dialer.support.xml 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/etc/permissions/com.google.android.maps.xml 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/etc/permissions/com.google.android.media.effects.xml 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -615,6 +615,9 @@ system/etc/security/cacerts/ff783690.0 0 0 644 selabel=u:object_r:system_file:s0
 system/etc/sysconfig 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/etc/sysconfig/google.xml 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/etc/sysconfig/google_build.xml 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/etc/sysconfig/google_vr_build.xml 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/etc/sysconfig/nexus.xml 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/etc/sysconfig/whitelist_com.android.omadm.service.xml 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/etc/updatecmds 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/etc/updatecmds/google_generic_update.txt 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/etc/wifi 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -790,7 +793,7 @@ system/framework/com.android.location.provider.jar 0 0 644 selabel=u:object_r:sy
 system/framework/com.android.media.remotedisplay.jar 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/framework/com.android.mediadrm.signer.jar 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/framework/com.android.nfc_extras.jar 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/framework/com.google.android.camera2.jar 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/framework/com.google.android.camera.experimental2015.jar 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/framework/com.google.android.dialer.support.jar 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/framework/com.google.android.maps.jar 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/framework/com.google.android.media.effects.jar 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0

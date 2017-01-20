@@ -58,6 +58,8 @@ local-pre-zip-misc:
 	$(hide) rm -rf $(ZIP_DIR)/system/lib64
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libDecRes_sdk.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libminivenus.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libjni_keyboarddecoder.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libjni_latinimegoogle.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libmresearch.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libsecurities_sdk.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libwebp.so

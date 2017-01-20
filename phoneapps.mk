@@ -7,6 +7,8 @@ private-phone-apps := \
 	BluetoothMidiService \
 	CertInstaller \
 	FaceLock \
+	GoogleCalendarSyncAdapter \
+	GoogleContactsSyncAdapter \
 	KeyChain \
 	LatinImeGoogle \
 	NfcNci \
@@ -26,11 +28,22 @@ private-phone-priv-apps := \
 	BackupRestoreConfirmation \
 	CarrierConfig \
 	CellBroadcastReceiver \
+	ConfigUpdater \
 	ExternalStorageProvider \
 	FusedLocation \
+	GoogleBackupTransport \
+	GoogleFeedback \
+	GoogleLoginService \
+	GoogleOneTimeInitializer \
+	GooglePackageInstaller \
+	GooglePartnerSetup \
+	GoogleServicesFramework \
 	InputDevices \
 	MusicFX \
+	Phonesky \
+	PrebuiltGmsCore \
 	ProxyHandler \
+	SetupWizard \
 	SharedStorageBackup \
 	Shell \
 	StatementService \
