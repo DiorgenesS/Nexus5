@@ -1,4 +1,5 @@
 out/*
+ROM/*
 temp/*
 stockrom.zip
 .delete-zip-file-when-clean
