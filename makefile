@@ -54,8 +54,6 @@ include $(PORT_BUILD)/porting.mk
 #pre_install_data_packages := $(TMP_DIR)/pre_install_apk_pkgname.txt
 local-pre-zip-misc:
 	$(TOOLS_DIR)/post_process_props.py out/ZIP/system/build.prop other/build.prop
-	@echo copying files!
-	$(hide) cp -rf other/system $(ZIP_DIR)/
 	@echo remove unnecessary libs!
 	$(hide) rm -rf $(ZIP_DIR)/system/lib64
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libDecRes_sdk.so
@@ -67,8 +65,15 @@ local-pre-zip-misc:
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libxmpass_sdk_patcher.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/xmpass_libweibosdkcore.so
 	@echo remove unnecessary files!
+	$(hide) rm -rf $(ZIP_DIR)/data/miui/prebuilts
+	$(hide) rm -rf $(ZIP_DIR)/data/miui/videoplugins
+	$(hide) rm -rf $(ZIP_DIR)/data/miui/yellowpage
+	$(hide) rm -rf $(ZIP_DIR)/data/miui/cts.prop
+	$(hide) rm -rf $(ZIP_DIR)/data/miui/resolves_miui.conf
 	$(hide) rm -rf $(ZIP_DIR)/system/recovery-from-boot.p
 	$(hide) rm -rf $(ZIP_DIR)/system/media/audio/*
+	@echo copying files!
+	$(hide) cp -rf other/system $(ZIP_DIR)/
 	@echo use only miui sounds!
 	$(hide) cp -rf $(PORT_ROOT)/miui/system/media/$(local-density)/audio/* $(ZIP_DIR)/system/media/audio
 	$(hide) rm -rf $(ZIP_DIR)/system/media/audio/create_symlink_for_audio-timestamp
