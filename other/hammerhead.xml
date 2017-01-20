@@ -54,4 +54,8 @@
     <bool name="is_xiaomi_device">false</bool>
     <!--the vendor feature, it's value may be qcom,mediatek,leadcore or nvidia-->
     <string name="vendor">qcom</string>
+    <!--b0:flash b1:hdr b2:motion b3:night-->
+    <integer name="camera_supported_asd">0</integer>
+    <!--whether the device supports bt debug trace-->
+    <bool name="btdebug_enabled">true</bool>
 </features>
