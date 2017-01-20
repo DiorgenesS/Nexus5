@@ -50,6 +50,8 @@ system/app/LatinImeGoogle/lib/arm/libjni_keyboarddecoder.so 0 0 777 selabel=u:ob
 system/app/LatinImeGoogle/lib/arm/libjni_latinimegoogle.so 0 0 777 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/app/LiveWallpapersPicker 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/app/LiveWallpapersPicker/LiveWallpapersPicker.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/app/MiuiVideoPlayer 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/app/MiuiVideoPlayer/MiuiVideoPlayer.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/app/NfcNci 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/app/NfcNci/NfcNci.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/app/NfcNci/lib 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
