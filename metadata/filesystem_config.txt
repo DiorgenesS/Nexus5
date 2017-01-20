@@ -642,8 +642,8 @@ system/fonts/DroidSans-Bold.ttf 0 0 777 selabel=u:object_r:system_file:s0 capabi
 system/fonts/DroidSans.ttf 0 0 777 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/fonts/DroidSansFallback.ttf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/fonts/DroidSansMono.ttf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/fonts/NotoColorEmoji.ttf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/fonts/NanumGothic.ttf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/fonts/NotoColorEmoji.ttf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/fonts/NotoNaskh-Bold.ttf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/fonts/NotoNaskh-Regular.ttf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/fonts/NotoNaskhArabic-Bold.ttf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
