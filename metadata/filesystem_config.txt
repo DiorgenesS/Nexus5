@@ -30,6 +30,8 @@ system/app/FaceLock/FaceLock.apk 0 0 644 selabel=u:object_r:system_file:s0 capab
 system/app/FaceLock/lib 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/app/FaceLock/lib/arm 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/app/FaceLock/lib/arm/libfacelock_jni.so 0 0 777 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/app/GoogleCalendarSyncAdapter 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/app/GoogleCalendarSyncAdapter/GoogleCalendarSyncAdapter.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/app/GoogleCamera 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/app/GoogleCamera/GoogleCamera.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/app/GoogleContactsSyncAdapter 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
