@@ -7,7 +7,6 @@ private-phone-apps := \
 	BluetoothMidiService \
 	CertInstaller \
 	KeyChain \
-	LatinIME \
 	LiveWallpapers \
 	NfcNci \
 	PacProcessor \
@@ -19,8 +18,7 @@ private-phone-apps := \
 	telresources \
 	TimeService \
 	WallpaperPicker \
-	WAPPushManager \
-	webview 
+	WAPPushManager 
 
 private-phone-priv-apps := \
 	AudioFX \
@@ -33,7 +31,6 @@ private-phone-priv-apps := \
 	FusedLocation \
 	InputDevices \
 	OmaDmclient \
-	OneTimeInitializer \
 	ProxyHandler \
 	Screencast \
 	SharedStorageBackup \
