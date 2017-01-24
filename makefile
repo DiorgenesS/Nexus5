@@ -19,7 +19,7 @@ local-modified-apps :=
 local-modified-jars := org.cyanogenmod.platform
 
 # All apks from MIUI
-local-miui-removed-apps := FM
+local-miui-removed-apps := BugReport FM GameCenter MiGameCenterSDKService MiLivetalk Mipay MiuiVideo MiuiVoip QuickSearchBox SogouInput SystemAdSolution VoiceAssist WebViewGoogle XiaomiVip XMPass
 
 local-miui-modified-apps := 
 
@@ -53,5 +53,24 @@ include $(PORT_BUILD)/porting.mk
 #updater := $(ZIP_DIR)/META-INF/com/google/android/updater-script
 #pre_install_data_packages := $(TMP_DIR)/pre_install_apk_pkgname.txt
 local-pre-zip-misc:
+	@echo remove unnecessary libs!
+	$(hide) rm -rf $(ZIP_DIR)/system/lib64
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libDecRes_sdk.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libjni_eglfence.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libjni_filtershow_filters.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libjni_jpegstream.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libjni_terminal.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/librsjni.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libminivenus.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libmresearch.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libsecurities_sdk.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libwebp.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libweibosdkcore_sogou.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libxmpass_sdk_patcher.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/xmpass_libweibosdkcore.so
+	@echo remove unnecessary files!
+	$(hide) rm -rf $(ZIP_DIR)/system/recovery-from-boot.bak
+	$(hide) rm -rf $(ZIP_DIR)/system/etc/CHANGELOG-CM.txt
+	$(hide) rm -rf $(ZIP_DIR)/system/etc/CHANGES.txt
 	@echo copying files!
 	$(hide) cp -rf other/system $(ZIP_DIR)/
