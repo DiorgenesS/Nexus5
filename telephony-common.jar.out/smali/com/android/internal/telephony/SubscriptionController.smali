@@ -988,6 +988,7 @@
     #move-result v15
 
     const/16 v15, -0x1
+
     .line 305
     .local v15, "userNwMode":I
     invoke-static {v3}, Landroid/telephony/SubscriptionInfo;->givePrintableIccid(Ljava/lang/String;)Ljava/lang/String;
