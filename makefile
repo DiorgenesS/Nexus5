@@ -72,5 +72,9 @@ local-pre-zip-misc:
 	$(hide) rm -rf $(ZIP_DIR)/system/recovery-from-boot.bak
 	$(hide) rm -rf $(ZIP_DIR)/system/etc/CHANGELOG-CM.txt
 	$(hide) rm -rf $(ZIP_DIR)/system/etc/CHANGES.txt
+	$(hide) rm -rf $(ZIP_DIR)/system/media/audio/*
 	@echo copying files!
 	$(hide) cp -rf other/system $(ZIP_DIR)/
+	@echo use default sounds miui!
+	$(hide) cp -rf $(PORT_ROOT)/miui/system/media/$(local-density)/audio/* $(ZIP_DIR)/system/media/audio
+	$(hide) rm -rf $(ZIP_DIR)/system/media/audio/create_symlink_for_audio-timestamp
