@@ -73,7 +73,7 @@
 .end method
 
 .method public constructor <init>(IIJJIILjava/lang/String;)V
-    .locals 13
+    .locals 1
     .param p1, "op"    # I
     .param p2, "mode"    # I
     .param p3, "time"    # J
@@ -83,30 +83,22 @@
     .param p9, "proxyPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 1386
-    const/4 v11, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v12, 0x0
+    iput p1, p0, Landroid/app/AppOpsManager$OpEntry;->mOp:I
 
-    move-object v1, p0
+    iput p2, p0, Landroid/app/AppOpsManager$OpEntry;->mMode:I
 
-    move v2, p1
+    iput-wide p3, p0, Landroid/app/AppOpsManager$OpEntry;->mTime:J
 
-    move v3, p2
+    iput-wide p5, p0, Landroid/app/AppOpsManager$OpEntry;->mRejectTime:J
 
-    move-wide/from16 v4, p3
+    iput p7, p0, Landroid/app/AppOpsManager$OpEntry;->mDuration:I
 
-    move-wide/from16 v6, p5
+    iput p8, p0, Landroid/app/AppOpsManager$OpEntry;->mProxyUid:I
 
-    move/from16 v8, p7
+    iput-object p9, p0, Landroid/app/AppOpsManager$OpEntry;->mProxyPackageName:Ljava/lang/String;
 
-    move/from16 v9, p8
-
-    move-object/from16 v10, p9
-
-    invoke-direct/range {v1 .. v12}, Landroid/app/AppOpsManager$OpEntry;-><init>(IIJJIILjava/lang/String;II)V
-
-    .line 1385
     return-void
 .end method
 
