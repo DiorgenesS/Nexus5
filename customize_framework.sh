@@ -45,6 +45,11 @@ function applyPatch() {
 	done
 }
 
+if [ $2 = "$BUILD_OUT/framework" ]
+then
+    applyPatch "overlay/framework"
+fi
+
 if [ $2 = "$BUILD_OUT/services" ]
 then
     applyPatch "overlay/services"
