@@ -1,0 +1,3 @@
+post-build=google/hammerhead/hammerhead:6.0.1/M4B30X/3237893:user/release-keys
+post-timestamp=1482374710
+pre-device=hammerhead
