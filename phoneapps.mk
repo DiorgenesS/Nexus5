@@ -17,6 +17,7 @@ private-phone-apps := \
 	Stk \
 	telresources \
 	TimeService \
+	UserDictionaryProvider \
 	WallpaperPicker \
 	WAPPushManager 
 
