@@ -1594,5 +1594,4 @@ system/vendor/pittpatt/models/recognition 0 2000 755 selabel=u:object_r:system_f
 system/vendor/pittpatt/models/recognition/face.face.y0-y0-71-N-tree_7-wmd.bin 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/xbin 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/xbin/dexdump 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/xbin/su 0 2000 6755 selabel=u:object_r:su_exec:s0 capabilities=0x0
 system/xbin/wlutil 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
