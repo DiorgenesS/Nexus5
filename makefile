@@ -54,6 +54,9 @@ include $(PORT_BUILD)/porting.mk
 #pre_install_data_packages := $(TMP_DIR)/pre_install_apk_pkgname.txt
 local-pre-zip-misc:
 	$(TOOLS_DIR)/post_process_props.py out/ZIP/system/build.prop other/build.prop
+	@echo goodbye! miui prebuilt binaries!
+	$(hide) rm -rf $(ZIP_DIR)/system/bin/app_process32_vendor
+	$(hide) cp -rf stockrom/system/bin/app_process32 $(ZIP_DIR)/system/bin/app_process32
 	@echo remove unnecessary libs!
 	$(hide) rm -rf $(ZIP_DIR)/system/lib64
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libDecRes_sdk.so
