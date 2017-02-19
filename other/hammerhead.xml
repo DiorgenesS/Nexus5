@@ -49,7 +49,7 @@
     <!--whether the device supports erase external storage-->
     <bool name="support_erase_external_storage">true</bool>
     <!--whether the device supports headset-->
-    <bool name="support_headset">false</bool>
+    <bool name="support_headset">true</bool>
     <!--whether the device supports IR-->
     <bool name="support_ir">false</bool>
     <!-- whether the device supports app hiding-->
