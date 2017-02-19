@@ -27,7 +27,7 @@
     <!--whether the device supports page layout-->
     <bool name="support_page_layout">false</bool>
     <!--whether the device supports record param-->
-    <bool name="support_record_param">false</bool>
+    <bool name="support_record_param">true</bool>
     <!--whether the device supports interview record param-->
     <bool name="support_interview_record_param">false</bool>
     <!--whether the device supports stereo record-->
@@ -49,7 +49,7 @@
     <!--whether the device supports erase external storage-->
     <bool name="support_erase_external_storage">true</bool>
     <!--whether the device supports headset-->
-    <bool name="support_headset">false</bool>
+    <bool name="support_headset">true</bool>
     <!--whether the device supports IR-->
     <bool name="support_ir">false</bool>
     <!-- whether the device supports app hiding-->
