@@ -21,7 +21,7 @@ ro.build.flavor=hammerhead-user
 ro.product.model=Nexus 5
 ro.product.brand=google
 ro.product.name=hammerhead
-ro.product.device=hammerhead
+ro.product.device=Hammerhead
 ro.product.board=hammerhead
 # ro.product.cpu.abi and ro.product.cpu.abi2 are obsolete,
 # use ro.product.cpu.abilist instead.
