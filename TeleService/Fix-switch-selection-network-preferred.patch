@@ -1,0 +1,132 @@
+From 3b517a9c829acbd21d7635caf80fdc25c623e9e5 Mon Sep 17 00:00:00 2001
+From: Diorgenes <dyogenes_gd@hotmail.com>
+Date: Mon, 3 Apr 2017 12:00:01 -0300
+Subject: [PATCH] Fix switch selection mode network preferred
+
+---
+ TeleService/res/values-pt-rBR/strings.xml          |  3 +-
+ TeleService/res/values/arrays.xml                  | 48 +++++++++++++++-------
+ TeleService/res/values/strings.xml                 |  1 +
+ TeleService/res/xml/preferred_network_type_lte.xml |  6 ++-
+ 4 files changed, 41 insertions(+), 17 deletions(-)
+
+--- a/TeleService/res/values-pt-rBR/strings.xml
++++ b/TeleService/res/values-pt-rBR/strings.xml
+@@ -622,12 +622,13 @@ A rede preferencial será utilizada."</string>
+     <string name="preferred_network_type_title">Tipo de rede preferencial</string>
+     <string name="preferred_network_type_pref_entries_global">Global</string>
+     <string name="preferred_network_type_pref_entries_auto">Automática</string>
+-    <string name="preferred_network_type_pref_entries_4g_preferred">LTE preferencial</string>
++    <string name="preferred_network_type_pref_entries_4g_preferred">4G preferencial</string>
+     <string name="preferred_network_type_pref_entries_3g_preferred">3G preferencial</string>
+     <string name="preferred_network_type_pref_entries_4g_preferred_cdma">4G preferencial (CDMA)</string>
+     <string name="preferred_network_type_pref_entries_3g_preferred_cdma">3G preferencial (CDMA)</string>
+     <string name="preferred_network_type_pref_entries_only_2g">Somente 2G (economiza bateria)</string>
+     <string name="preferred_network_type_pref_entries_only_3g">Somente 3G</string>
++    <string name="preferred_network_type_pref_entries_only_4g">Somente 4G</string>
+     <string name="preferred_network_type_3g_only_warning">Seu cartão SIM precisa oferecer suporte a 3G para se conectar à rede.</string>
+     <string name="call_description_recording">Gravando…</string>
+     <string name="call_record_loading_content">Carregando…</string>
+
+--- a/TeleService/res/values/arrays.xml
++++ b/TeleService/res/values/arrays.xml
+@@ -41,21 +41,41 @@
+         <item>SHOW</item>
+     </string-array>
+     <string-array name="preferred_network_mode_choices">
+-        <item>LTE / WCDMA</item>
+-        <item>LTE</item>
+-        <item>Global</item>
+-        <item>GSM/WCDMA/LTE</item>
+-        <item>CDMA + LTE/EvDo</item>
+-        <item>CDMA/EvDo/GSM/WCDMA</item>
++        <item>TD-SCDMA, LTE, CDMA, EvDo GSM/WCDMA</item>
++        <item>TD-SCDMA, GSM/WCDMA, CDMA and EvDo</item>
++        <item>TD-SCDMA, GSM/WCDMA and LTE</item>
++        <item>TD-SCDMA, WCDMA and LTE</item>
++        <item>TD-SCDMA, GSM/WCDMA</item>
++        <item>TD-SCDMA, GSM and LTE</item>
++        <item>TD-SCDMA and GSM</item>
++        <item>TD-SCDMA and LTE</item>
++        <item>TD-SCDMA and WCDMA</item>
++        <item>TD-SCDMA only</item>
++        <item>LTE/WCDMA</item>
++        <item>LTE only</item>
++        <item>LTE/GSM/CDMA auto (PRL)</item>
++        <item>LTE/GSM auto (PRL)</item>
++        <item>LTE/CDMA auto (PRL)</item>
++        <item>GSM/CDMA auto (PRL)</item>
+         <item>EvDo only</item>
+-        <item>CDMA w/o EvDo</item>
+-        <item>CDMA/EvDo auto</item>
+-        <item>GSM/WCDMA auto</item>
++        <item>CDMA only</item>
++        <item>CDMA auto (PRL)</item>
++        <item>GSM auto (PRL)</item>
+         <item>WCDMA only</item>
+         <item>GSM only</item>
+-        <item>GSM/WCDMA preferred</item>
++        <item>WCDMA preferred</item>
+     </string-array>
+     <string-array name="preferred_network_mode_values">
++        <item>22</item>
++        <item>21</item>
++        <item>20</item>
++        <item>19</item>
++        <item>18</item>
++        <item>17</item>
++        <item>16</item>
++        <item>15</item>
++        <item>14</item>
++        <item>13</item>
+         <item>12</item>
+         <item>11</item>
+         <item>10</item>
+@@ -342,13 +362,13 @@
+         <item>4</item>
+     </integer-array>
+     <integer-array name="support_networktypes_gsm_master">
+-        <item>20</item>
+-        <item>18</item>
++        <item>9</item>
++        <item>11</item>
++        <item>3</item>
++        <item>2</item>
+         <item>1</item>
+     </integer-array>
+     <integer-array name="support_networktypes_gsm_vice">
+-        <item>20</item>
+-        <item>18</item>
+         <item>1</item>
+     </integer-array>
+     <integer-array name="network_mode_3g_cm">
+
+--- a/TeleService/res/values/strings.xml
++++ b/TeleService/res/values/strings.xml
+@@ -771,6 +771,7 @@ Using preferred network instead."</string>
+     <string name="preferred_network_type_pref_entries_3g_preferred_cdma">Prefer 3G (CDMA)</string>
+     <string name="preferred_network_type_pref_entries_only_2g">2G only (saves battery)</string>
+     <string name="preferred_network_type_pref_entries_only_3g">3G only</string>
++    <string name="preferred_network_type_pref_entries_only_4g">4G only</string>
+     <string name="preferred_network_type_td_scdma">GSM/TD-SCDMA</string>
+     <string name="preferred_network_type_3g_only_warning">Your SIM card must support 3G to connect to the network.</string>
+     <string name="call_description_recording">Recording…</string>
+
+--- a/TeleService/res/xml/preferred_network_type_lte.xml
++++ b/TeleService/res/xml/preferred_network_type_lte.xml
+@@ -1,7 +1,9 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <PreferenceScreen android:title="@string/preferred_network_type_title" android:key="network_type_list_gsm_umts"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+-    <miui.preference.RadioButtonPreference android:title="@string/preferred_network_type_pref_entries_4g_preferred" android:key="20" />
+-    <miui.preference.RadioButtonPreference android:title="@string/preferred_network_type_pref_entries_3g_preferred" android:key="18" />
++    <miui.preference.RadioButtonPreference android:title="@string/preferred_network_type_pref_entries_4g_preferred" android:key="9" />
++    <miui.preference.RadioButtonPreference android:title="@string/preferred_network_type_pref_entries_only_4g" android:key="11" />
++    <miui.preference.RadioButtonPreference android:title="@string/preferred_network_type_pref_entries_3g_preferred" android:key="3" />
++    <miui.preference.RadioButtonPreference android:title="@string/preferred_network_type_pref_entries_only_3g" android:key="2" />
+     <miui.preference.RadioButtonPreference android:title="@string/preferred_network_type_pref_entries_only_2g" android:key="1" />
+ </PreferenceScreen>
+\ No newline at end of file
+-- 
+2.7.4
+
