@@ -19,9 +19,9 @@ local-modified-apps :=
 local-modified-jars := 
 
 # All apks from MIUI
-local-miui-removed-apps := BugReport FM Email GameCenter MiGameCenterSDKService MiLivetalk Mipay MiuiSuperMarket MiuiVideo MiuiVoip OneTimeInitializer QuickSearchBox SogouInput SystemAdSolution VoiceAssist XiaomiVip XMPass
+local-miui-removed-apps := BugReport FM Email GameCenter MiGameCenterSDKService MiLivetalk Mipay MiuiCamera MiuiSuperMarket MiuiVideo MiuiVoip OneTimeInitializer QuickSearchBox SogouInput SystemAdSolution VoiceAssist XiaomiVip XMPass
 
-local-miui-modified-apps := ContactsProvider InCallUI MiuiSystemUI SecurityCenter Settings TeleService
+local-miui-modified-apps := ContactsProvider InCallUI MiuiHome MiuiSystemUI SecurityCenter Settings TeleService
 
 # Config density for co-developers to use the aaps with HDPI or XHDPI resource,
 # Default configrations are HDPI for ics branch and XHDPI for jellybean branch
@@ -79,6 +79,7 @@ local-pre-zip-misc:
 	$(hide) rm -rf $(ZIP_DIR)/system/media/audio/*
 	@echo copying files!
 	$(hide) cp -rf other/system $(ZIP_DIR)/
+	$(hide) cp -rf stockrom/system/app/GoogleCamera $(ZIP_DIR)/data/miui/app/noncustomized
 	@echo use only miui sounds!
 	$(hide) cp -rf $(PORT_ROOT)/miui/system/media/$(local-density)/audio/* $(ZIP_DIR)/system/media/audio
 	$(hide) rm -rf $(ZIP_DIR)/system/media/audio/create_symlink_for_audio-timestamp
