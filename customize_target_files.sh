@@ -14,4 +14,4 @@ cp -f other/Hammerhead.xml out/target_files/SYSTEM/etc/device_features
 
 #Added multi cust variants for miui
 rm -rf out/target_files/DATA/miui/cust
-cp -rf other/miui out/target_files/DATA/
+cp -rf other/cust out/target_files/DATA/miui
