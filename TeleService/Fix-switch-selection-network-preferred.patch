@@ -8,7 +8,8 @@ Subject: [PATCH] Fix switch selection mode network preferred
  TeleService/res/values/arrays.xml                  | 48 +++++++++++++++-------
  TeleService/res/values/strings.xml                 |  1 +
  TeleService/res/xml/preferred_network_type_lte.xml |  6 ++-
- 4 files changed, 41 insertions(+), 17 deletions(-)
+ .../PreferredNetworkTypeListPreference.smali       | 48 ----------------------
+ 5 files changed, 41 insertions(+), 65 deletions(-)
 
 --- a/TeleService/res/values-pt-rBR/strings.xml
 +++ b/TeleService/res/values-pt-rBR/strings.xml
@@ -127,6 +128,64 @@ Subject: [PATCH] Fix switch selection mode network preferred
      <miui.preference.RadioButtonPreference android:title="@string/preferred_network_type_pref_entries_only_2g" android:key="1" />
  </PreferenceScreen>
 \ No newline at end of file
+
+--- a/TeleService/smali/com/android/phone/settings/PreferredNetworkTypeListPreference.smali
++++ b/TeleService/smali/com/android/phone/settings/PreferredNetworkTypeListPreference.smali
+@@ -1130,54 +1130,6 @@
+ 
+     if-ne v3, v6, :cond_2
+ 
+-    new-instance v6, Landroid/app/AlertDialog$Builder;
+-
+-    invoke-direct {v6, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+-
+-    const v7, 0x7f0802e8
+-
+-    invoke-virtual {v6, v7}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
+-
+-    move-result-object v6
+-
+-    const v7, 0x7f0802f3
+-
+-    invoke-virtual {v6, v7}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
+-
+-    move-result-object v6
+-
+-    const v7, 0x104000a
+-
+-    new-instance v8, Lcom/android/phone/settings/PreferredNetworkTypeListPreference$3;
+-
+-    invoke-direct {v8, p0, v3}, Lcom/android/phone/settings/PreferredNetworkTypeListPreference$3;-><init>(Lcom/android/phone/settings/PreferredNetworkTypeListPreference;I)V
+-
+-    invoke-virtual {v6, v7, v8}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+-
+-    move-result-object v6
+-
+-    const/high16 v7, 0x1040000
+-
+-    new-instance v8, Lcom/android/phone/settings/PreferredNetworkTypeListPreference$2;
+-
+-    invoke-direct {v8, p0}, Lcom/android/phone/settings/PreferredNetworkTypeListPreference$2;-><init>(Lcom/android/phone/settings/PreferredNetworkTypeListPreference;)V
+-
+-    invoke-virtual {v6, v7, v8}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+-
+-    move-result-object v6
+-
+-    new-instance v7, Lcom/android/phone/settings/PreferredNetworkTypeListPreference$1;
+-
+-    invoke-direct {v7, p0}, Lcom/android/phone/settings/PreferredNetworkTypeListPreference$1;-><init>(Lcom/android/phone/settings/PreferredNetworkTypeListPreference;)V
+-
+-    invoke-virtual {v6, v7}, Landroid/app/AlertDialog$Builder;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)Landroid/app/AlertDialog$Builder;
+-
+-    move-result-object v6
+-
+-    invoke-virtual {v6}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
+-
+-    goto :goto_1
+-
+     :cond_2
+     invoke-direct {p0, v3}, Lcom/android/phone/settings/PreferredNetworkTypeListPreference;->handleClick(I)V
+ 
 -- 
 2.7.4
 
