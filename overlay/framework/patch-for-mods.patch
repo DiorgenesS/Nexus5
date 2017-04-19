@@ -28,7 +28,8 @@ Subject: [PATCH] patch for "Independent settings", necessary for futures mods
  .../MiuiSeekBarPreference$SavedState$1.smali       |   84 +
  .../MiuiSeekBarPreference$SavedState.smali         |  125 +
  .../android/preference/MiuiSeekBarPreference.smali |  895 +++++++
- 24 files changed, 8923 insertions(+)
+ .../smali/android/preference/Preference.smali      |   25 +-
+ 25 files changed, 8941 insertions(+), 7 deletions(-)
 
 
 --- /dev/null
@@ -9049,6 +9050,48 @@ Subject: [PATCH] patch for "Independent settings", necessary for futures mods
 +
 +    goto :goto_1d
 +.end method
+
+--- a/framework/smali/android/preference/Preference.smali
++++ b/framework/smali/android/preference/Preference.smali
+@@ -474,13 +474,7 @@
+     .local v0, "shouldPersist":Z
+     if-eqz v0, :cond_1
+ 
+-    invoke-virtual {p0}, Landroid/preference/Preference;->getSharedPreferences()Landroid/content/SharedPreferences;
+-
+-    move-result-object v1
+-
+-    iget-object v2, p0, Landroid/preference/Preference;->mKey:Ljava/lang/String;
+-
+-    invoke-interface {v1, v2}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
++    invoke-virtual {p0}, Landroid/preference/Preference;->isPersisted()Z
+ 
+     move-result v1
+ 
+@@ -1638,6 +1632,23 @@
+     goto :goto_0
+ .end method
+ 
++.method protected isPersisted()Z
++    .registers 3
++
++    .prologue
++    invoke-virtual {p0}, Landroid/preference/Preference;->getSharedPreferences()Landroid/content/SharedPreferences;
++
++    move-result-object v0
++
++    iget-object v1, p0, Landroid/preference/Preference;->mKey:Ljava/lang/String;
++
++    invoke-interface {v0, v1}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
++
++    move-result v0
++
++    return v0
++.end method
++
+ .method public isPersistent()Z
+     .locals 1
+ 
 -- 
 2.7.4
 
