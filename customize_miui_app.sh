@@ -44,7 +44,7 @@ fi
 
 if [ $1 = "MiuiHome" ];then
     applyPatch $1 $2
-	sed -i '/- 16/a\sdkInfo:\n  minSdkVersion: '\''23'\''\n  targetSdkVersion: '\''23'\''' $2/apktool.yml
+	sed -i '/- 16/a\  - 27\nsdkInfo:\n  minSdkVersion: '\''23'\''\n  targetSdkVersion: '\''23'\''' $2/apktool.yml
 fi
 
 if [ $1 = "MiuiSystemUI" ];then
