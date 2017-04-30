@@ -19,7 +19,7 @@ local-modified-apps :=
 local-modified-jars := org.cyanogenmod.platform
 
 # All apks from MIUI
-local-miui-removed-apps := BugReport FM Email GameCenter MiGameCenterSDKService MiLivetalk Mipay MiuiSuperMarket MiuiVideo MiuiVoip OneTimeInitializer QuickSearchBox SogouInput SystemAdSolution VoiceAssist XiaomiVip XMPass
+local-miui-removed-apps := BugReport Email FM GameCenter MiGameCenterSDKService MiLivetalk Mipay MiuiSuperMarket MiuiVideo MiuiVoip OneTimeInitializer PaymentService PersonalAssistant QuickSearchBox SogouInput SystemAdSolution VoiceAssist XiaomiVip XMPass
 
 local-miui-modified-apps := ContactsProvider InCallUI MiuiSystemUI SecurityCenter TeleService
 
@@ -73,6 +73,12 @@ local-pre-zip-misc:
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libxmpass_sdk_patcher.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/xmpass_libweibosdkcore.so
 	@echo remove unnecessary files!
+	$(hide) rm -rf $(ZIP_DIR)/data/miui/app/*
+	$(hide) rm -rf $(ZIP_DIR)/data/miui/videoplugins
+	$(hide) rm -rf $(ZIP_DIR)/data/miui/yellowpage
+	$(hide) rm -rf $(ZIP_DIR)/data/miui/cdrom_install.iso
+	$(hide) rm -rf $(ZIP_DIR)/data/miui/cts.prop
+	$(hide) rm -rf $(ZIP_DIR)/data/miui/resolves_miui.conf
 	$(hide) rm -rf $(ZIP_DIR)/system/recovery-from-boot.bak
 	$(hide) rm -rf $(ZIP_DIR)/system/etc/CHANGELOG-CM.txt
 	$(hide) rm -rf $(ZIP_DIR)/system/etc/CHANGES.txt
@@ -82,3 +88,6 @@ local-pre-zip-misc:
 	@echo use default sounds miui!
 	$(hide) cp -rf $(PORT_ROOT)/miui/system/media/$(local-density)/audio/* $(ZIP_DIR)/system/media/audio
 	$(hide) rm -rf $(ZIP_DIR)/system/media/audio/create_symlink_for_audio-timestamp
+	@echo use roboto fonts!
+	$(hide) cp -rf stockrom/system/fonts/Roboto-Bold.ttf $(ZIP_DIR)/system/fonts/Miui-Bold.ttf
+	$(hide) cp -rf stockrom/system/fonts/Roboto-Regular.ttf $(ZIP_DIR)/system/fonts/Miui-Regular.ttf
