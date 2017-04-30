@@ -68,6 +68,8 @@ local-pre-zip-misc:
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libminivenus.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libmresearch.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libsecurities_sdk.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libttscompat.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libttspico.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libwebp.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libweibosdkcore_sogou.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libxmpass_sdk_patcher.so
@@ -79,6 +81,7 @@ local-pre-zip-misc:
 	$(hide) rm -rf $(ZIP_DIR)/data/miui/cdrom_install.iso
 	$(hide) rm -rf $(ZIP_DIR)/data/miui/cts.prop
 	$(hide) rm -rf $(ZIP_DIR)/data/miui/resolves_miui.conf
+	$(hide) rm -rf $(ZIP_DIR)/system/addon.d
 	$(hide) rm -rf $(ZIP_DIR)/system/recovery-from-boot.bak
 	$(hide) rm -rf $(ZIP_DIR)/system/etc/CHANGELOG-CM.txt
 	$(hide) rm -rf $(ZIP_DIR)/system/etc/CHANGES.txt

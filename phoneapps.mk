@@ -10,7 +10,6 @@ private-phone-apps := \
 	LiveWallpapers \
 	NfcNci \
 	PacProcessor \
-	PicoTts \
 	PrintSpooler \
 	qcrilmsgtunnel \
 	shutdownlistener \
