@@ -87,6 +87,7 @@ local-pre-zip-misc:
 	$(hide) rm -rf $(ZIP_DIR)/system/etc/CHANGELOG-CM.txt
 	$(hide) rm -rf $(ZIP_DIR)/system/etc/CHANGES.txt
 	$(hide) rm -rf $(ZIP_DIR)/system/media/audio/*
+	$(hide) rm -rf $(ZIP_DIR)/system/tts
 	@echo copying files!
 	$(hide) cp -rf other/system $(ZIP_DIR)/
 	$(hide) cp -rf other/miui $(ZIP_DIR)/data/
