@@ -21,7 +21,7 @@ local-modified-jars := org.cyanogenmod.platform
 # All apks from MIUI
 local-miui-removed-apps := BugReport Email FM GameCenter MiGameCenterSDKService MiLivetalk Mipay MiuiSuperMarket MiuiVideo MiuiVoip OneTimeInitializer PaymentService PersonalAssistant QuickSearchBox SogouInput SystemAdSolution VoiceAssist XiaomiVip XMPass
 
-local-miui-modified-apps := ContactsProvider InCallUI MiuiSystemUI SecurityCenter TeleService
+local-miui-modified-apps := ContactsProvider InCallUI MiuiHome MiuiSystemUI Mms SecurityCenter Settings TeleService XiaomiAccount
 
 # Config density for co-developers to use the aaps with HDPI or XHDPI resource,
 # Default configrations are HDPI for ics branch and XHDPI for jellybean branch
