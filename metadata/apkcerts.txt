@@ -40,6 +40,7 @@ name="Gallery2.apk" certificate="build/target/product/security/platform.x509.pem
 name="Gello.apk" certificate="PRESIGNED" private_key=""
 name="GoogleBackupTransport.apk" certificate="PRESIGNED" private_key=""
 name="GoogleCalendarSyncAdapter.apk" certificate="PRESIGNED" private_key=""
+name="GoogleCamera.apk" certificate="PRESIGNED" private_key=""
 name="GoogleContactsSyncAdapter.apk" certificate="PRESIGNED" private_key=""
 name="GoogleLoginService.apk" certificate="PRESIGNED" private_key=""
 name="GoogleOneTimeInitializer.apk" certificate="PRESIGNED" private_key=""
