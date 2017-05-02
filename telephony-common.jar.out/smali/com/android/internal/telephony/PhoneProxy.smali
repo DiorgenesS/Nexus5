@@ -3998,19 +3998,16 @@
     return-void
 .end method
 
-.method public selectNetworkManually(Lcom/android/internal/telephony/OperatorInfo;ZLandroid/os/Message;)V
+.method public selectNetworkManually(Lcom/android/internal/telephony/OperatorInfo;Landroid/os/Message;)V
     .locals 1
     .param p1, "network"    # Lcom/android/internal/telephony/OperatorInfo;
-    .param p2, "persistSelection"    # Z
-    .param p3, "response"    # Landroid/os/Message;
+    .param p2, "response"    # Landroid/os/Message;
 
     .prologue
-    .line 945
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneProxy;->mActivePhone:Lcom/android/internal/telephony/Phone;
 
-    invoke-interface {v0, p1, p2, p3}, Lcom/android/internal/telephony/Phone;->selectNetworkManually(Lcom/android/internal/telephony/OperatorInfo;ZLandroid/os/Message;)V
+    invoke-interface {v0, p1, p2}, Lcom/android/internal/telephony/Phone;->selectNetworkManually(Lcom/android/internal/telephony/OperatorInfo;Landroid/os/Message;)V
 
-    .line 944
     return-void
 .end method
 

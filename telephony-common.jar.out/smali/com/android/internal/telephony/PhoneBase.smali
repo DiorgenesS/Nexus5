@@ -7640,51 +7640,43 @@
     return-void
 .end method
 
-.method public selectNetworkManually(Lcom/android/internal/telephony/OperatorInfo;ZLandroid/os/Message;)V
+.method public selectNetworkManually(Lcom/android/internal/telephony/OperatorInfo;Landroid/os/Message;)V
     .locals 4
     .param p1, "network"    # Lcom/android/internal/telephony/OperatorInfo;
-    .param p2, "persistSelection"    # Z
-    .param p3, "response"    # Landroid/os/Message;
+    .param p2, "response"    # Landroid/os/Message;
 
     .prologue
-    .line 1059
     new-instance v1, Lcom/android/internal/telephony/PhoneBase$NetworkSelectMessage;
 
     invoke-direct {v1}, Lcom/android/internal/telephony/PhoneBase$NetworkSelectMessage;-><init>()V
 
-    .line 1060
     .local v1, "nsm":Lcom/android/internal/telephony/PhoneBase$NetworkSelectMessage;
-    iput-object p3, v1, Lcom/android/internal/telephony/PhoneBase$NetworkSelectMessage;->message:Landroid/os/Message;
+    iput-object p2, v1, Lcom/android/internal/telephony/PhoneBase$NetworkSelectMessage;->message:Landroid/os/Message;
 
-    .line 1061
     invoke-virtual {p1}, Lcom/android/internal/telephony/OperatorInfo;->getOperatorNumeric()Ljava/lang/String;
 
     move-result-object v2
 
     iput-object v2, v1, Lcom/android/internal/telephony/PhoneBase$NetworkSelectMessage;->operatorNumeric:Ljava/lang/String;
 
-    .line 1062
     invoke-virtual {p1}, Lcom/android/internal/telephony/OperatorInfo;->getOperatorAlphaLong()Ljava/lang/String;
 
     move-result-object v2
 
     iput-object v2, v1, Lcom/android/internal/telephony/PhoneBase$NetworkSelectMessage;->operatorAlphaLong:Ljava/lang/String;
 
-    .line 1063
     invoke-virtual {p1}, Lcom/android/internal/telephony/OperatorInfo;->getOperatorAlphaShort()Ljava/lang/String;
 
     move-result-object v2
 
     iput-object v2, v1, Lcom/android/internal/telephony/PhoneBase$NetworkSelectMessage;->operatorAlphaShort:Ljava/lang/String;
 
-    .line 1065
     const/16 v2, 0x10
 
     invoke-virtual {p0, v2, v1}, Lcom/android/internal/telephony/PhoneBase;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 1066
     .local v0, "msg":Landroid/os/Message;
     iget-object v2, p0, Lcom/android/internal/telephony/PhoneBase;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
@@ -7694,21 +7686,9 @@
 
     invoke-interface {v2, v3, v0}, Lcom/android/internal/telephony/CommandsInterface;->setNetworkSelectionModeManual(Ljava/lang/String;Landroid/os/Message;)V
 
-    .line 1068
-    if-eqz p2, :cond_0
-
-    .line 1069
     invoke-direct {p0, v1}, Lcom/android/internal/telephony/PhoneBase;->updateSavedNetworkOperator(Lcom/android/internal/telephony/PhoneBase$NetworkSelectMessage;)V
 
-    .line 1056
-    :goto_0
     return-void
-
-    .line 1071
-    :cond_0
-    invoke-direct {p0}, Lcom/android/internal/telephony/PhoneBase;->clearSavedNetworkSelection()V
-
-    goto :goto_0
 .end method
 
 .method public sendBurstDtmf(Ljava/lang/String;IILandroid/os/Message;)V

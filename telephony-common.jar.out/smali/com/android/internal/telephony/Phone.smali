@@ -746,7 +746,7 @@
 .method public abstract removeReferences()V
 .end method
 
-.method public abstract selectNetworkManually(Lcom/android/internal/telephony/OperatorInfo;ZLandroid/os/Message;)V
+.method public abstract selectNetworkManually(Lcom/android/internal/telephony/OperatorInfo;Landroid/os/Message;)V
 .end method
 
 .method public abstract sendBurstDtmf(Ljava/lang/String;IILandroid/os/Message;)V
