@@ -59,9 +59,18 @@ local-pre-zip-misc:
 	@echo remove unnecessary libs!
 	$(hide) rm -rf $(ZIP_DIR)/system/lib64
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libDecRes_sdk.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libdidi_secure.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libjni_eglfence.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libjni_filtershow_filters.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libjni_jpegstream.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libjni_jpegutil.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libjni_tinyplanet.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/librsjni.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libminivenus.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libmresearch.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libsecurities_sdk.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libttscompat.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libttspico.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libwebp.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libweibosdkcore_sogou.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libxmpass_sdk_patcher.so
@@ -73,6 +82,7 @@ local-pre-zip-misc:
 	$(hide) rm -rf $(ZIP_DIR)/data/miui/cdrom_install.iso
 	$(hide) rm -rf $(ZIP_DIR)/data/miui/cts.prop
 	$(hide) rm -rf $(ZIP_DIR)/data/miui/resolves_miui.conf
+	$(hide) rm -rf $(ZIP_DIR)/system/tts
 	$(hide) rm -rf $(ZIP_DIR)/system/recovery-from-boot.bak
 	@echo copying files!
 	$(hide) cp -rf other/system $(ZIP_DIR)/

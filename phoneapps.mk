@@ -11,7 +11,6 @@ private-phone-apps := \
 	NfcNci \
 	OpenWnn \
 	PacProcessor \
-	PicoTts \
 	PrintSpooler \
 	qcrilmsgtunnel \
 	UserDictionaryProvider \
