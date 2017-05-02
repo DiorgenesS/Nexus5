@@ -6,5 +6,8 @@ TARGET_FILES_DIR=$OUT_DIR/target_files
 build_prop_file=$TARGET_FILES_DIR/SYSTEM/build.prop
 OTHER_DIR=$PWD/other
 
+#remove native device features
+rm -rf out/target_files/SYSTEM/etc/device_features
+
 cp -f other/file_contexts out/target_files/META/
 rm -rf out/target_files/SYSTEM/vendor/preinstall
