@@ -14,6 +14,11 @@ cd $TARGET_BOOT_DIR/ramdisk
 cpio -i < ../boot.img-ramdisk
 cd - > /dev/null
 
+# remove default images for charger
+if [ -a $TARGET_BOOT_DIR/ramdisk/res ];then
+rm -rf $TARGET_BOOT_DIR/ramdisk/res
+fi
+
 # ramdisk miui
 if [ -d overlay/boot/ramdisk ];then
 cp -rf overlay/boot/ramdisk/* $TARGET_BOOT_DIR/ramdisk/

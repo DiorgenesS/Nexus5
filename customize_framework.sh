@@ -1,10 +1,6 @@
 #!/bin/bash
-
-OUT_MIUI_FRAMEWORK_DIR=$1
-OUT_FRAMEWORK_DIR=$2
-if [ "$OUT_FRAMEWORK_DIR" == "out/framework" ];then
-    cp ${OUT_FRAMEWORK_DIR/out\//}.jar.out/smali/android/widget/Editor*.smali $OUT_FRAMEWORK_DIR/smali/android/widget/
-fi
+# $1: dir for miui
+# $2: dir for original
 
 APKTOOL="$PORT_ROOT/tools/apktool --quiet"
 GIT_APPLY=$PORT_ROOT/tools/git.apply
@@ -47,6 +43,8 @@ function applyPatch() {
 
 if [ $2 = "$BUILD_OUT/framework" ]
 then
+    rm -rf $2/smali/android/widget/Editor*
+    cp -rf $1/smali/android/widget/Editor*.smali $2/smali/android/widget/
     applyPatch "overlay/framework"
 fi
 
