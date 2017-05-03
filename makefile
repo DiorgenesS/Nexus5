@@ -21,7 +21,7 @@ local-modified-jars :=
 # All apks from MIUI
 local-miui-removed-apps := BugReport Email FM GameCenter MiGameCenterSDKService MiLivetalk Mipay MiuiSuperMarket MiuiVideo MiuiVoip OneTimeInitializer PaymentService PersonalAssistant QuickSearchBox SogouInput SystemAdSolution VoiceAssist XiaomiVip XMPass YellowPage
 
-local-miui-modified-apps := MiuiSystemUI TeleService
+local-miui-modified-apps := MiuiSystemUI SecurityCenter TeleService
 
 # Config density for co-developers to use the aaps with HDPI or XHDPI resource,
 # Default configrations are HDPI for ics branch and XHDPI for jellybean branch
