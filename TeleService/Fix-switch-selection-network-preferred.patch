@@ -13,7 +13,7 @@ Subject: [PATCH] Fix switch selection mode network preferred
 
 --- a/TeleService/res/values-pt-rBR/strings.xml
 +++ b/TeleService/res/values-pt-rBR/strings.xml
-@@ -622,12 +622,13 @@ A rede preferencial será utilizada."</string>
+@@ -622,12 +622,13 @@
      <string name="preferred_network_type_title">Tipo de rede preferencial</string>
      <string name="preferred_network_type_pref_entries_global">Global</string>
      <string name="preferred_network_type_pref_entries_auto">Automática</string>
@@ -104,7 +104,7 @@ Subject: [PATCH] Fix switch selection mode network preferred
 
 --- a/TeleService/res/values/strings.xml
 +++ b/TeleService/res/values/strings.xml
-@@ -771,6 +771,7 @@ Using preferred network instead."</string>
+@@ -771,6 +771,7 @@
      <string name="preferred_network_type_pref_entries_3g_preferred_cdma">Prefer 3G (CDMA)</string>
      <string name="preferred_network_type_pref_entries_only_2g">2G only (saves battery)</string>
      <string name="preferred_network_type_pref_entries_only_3g">3G only</string>
