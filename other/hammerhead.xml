@@ -35,7 +35,7 @@
     <!--whether the device supports screen paper mode-->
     <bool name="support_screen_paper_mode">false</bool>
     <!--whether the device supports led light-->
-    <bool name="support_led_light">false</bool>
+    <bool name="support_led_light">true</bool>
     <!--whether the device supports button light-->
     <bool name="support_button_light">false</bool>
     <!--whether the device supports emulated storage-->
