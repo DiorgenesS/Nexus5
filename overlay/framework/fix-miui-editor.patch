@@ -15,7 +15,7 @@ Subject: [PATCH] Fix miui editor
      move-result-object v2
  
 -    const v3, 0x10900f4
-+    const v3, 0x10900e9
++    const v3, 0x10900e7
  
      const/4 v4, 0x0
  
