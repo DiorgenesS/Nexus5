@@ -22,8 +22,6 @@
     <bool name="is_dual_system">false</bool>
     <!--whether the device has dual sd card-->
     <bool name="support_dual_sd_card">false</bool>
-    <!--whether the device supports bt debug trace-->
-    <bool name="btdebug_enabled">true</bool>
     <!--whether the device supports page layout-->
     <bool name="support_page_layout">false</bool>
     <!--whether the device supports record param-->
@@ -61,7 +59,7 @@
     <!--whether the device is xiaomi-->
     <bool name="is_xiaomi_device">false</bool>
     <!--the vendor feature, it's value may be qcom,mediatek,leadcore or nvidia-->
-    <string name="vendor">qcom</string>
+    <string name="vendor">google</string>
     <!--b0:flash b1:hdr b2:motion b3:night-->
     <integer name="camera_supported_asd">0</integer>
     <!--whether the device supports bt debug trace-->
