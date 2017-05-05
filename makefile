@@ -74,6 +74,9 @@ local-pre-zip-misc:
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libttspico.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libwebp.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libweibosdkcore_sogou.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libWnnEngDic.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libWnnJpnDic.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libwnndict.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libxmpass_sdk_patcher.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/xmpass_libweibosdkcore.so
 	@echo remove unnecessary files!

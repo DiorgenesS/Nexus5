@@ -3,9 +3,6 @@ system/media/audio/notifications/MessageIncoming.ogg|../ui/MessageIncoming.ogg
 system/app/Bluetooth/lib/arm/libbluetooth_jni.so|/system/lib/libbluetooth_jni.so
 system/app/LatinIME/lib/arm/libjni_latinime.so|/system/lib/libjni_latinime.so
 system/app/NfcNci/lib/arm/libnfc_nci_jni.so|/system/lib/libnfc_nci_jni.so
-system/app/OpenWnn/lib/arm/libWnnEngDic.so|/system/lib/libWnnEngDic.so
-system/app/OpenWnn/lib/arm/libWnnJpnDic.so|/system/lib/libWnnJpnDic.so
-system/app/OpenWnn/lib/arm/libwnndict.so|/system/lib/libwnndict.so
 system/app/PacProcessor/lib/arm/libjni_pacprocessor.so|/system/lib/libjni_pacprocessor.so
 system/app/PrintSpooler/lib/arm/libprintspooler_jni.so|/system/lib/libprintspooler_jni.so
 system/bin/acpi|toybox

@@ -9,7 +9,6 @@ private-phone-apps := \
 	KeyChain \
 	LatinIME \
 	NfcNci \
-	OpenWnn \
 	PacProcessor \
 	PrintSpooler \
 	qcrilmsgtunnel \
