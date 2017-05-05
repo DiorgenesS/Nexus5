@@ -82,8 +82,12 @@ local-pre-zip-misc:
 	$(hide) rm -rf $(ZIP_DIR)/data/miui/cdrom_install.iso
 	$(hide) rm -rf $(ZIP_DIR)/data/miui/cts.prop
 	$(hide) rm -rf $(ZIP_DIR)/data/miui/resolves_miui.conf
-	$(hide) rm -rf $(ZIP_DIR)/system/tts
 	$(hide) rm -rf $(ZIP_DIR)/system/recovery-from-boot.bak
+	$(hide) rm -rf $(ZIP_DIR)/system/media/audio/*
+	$(hide) rm -rf $(ZIP_DIR)/system/tts
 	@echo copying files!
 	$(hide) cp -rf other/system $(ZIP_DIR)/
 	$(hide) cp -rf other/miui $(ZIP_DIR)/data/
+	@echo use only miui sounds!
+	$(hide) cp -rf $(PORT_ROOT)/miui/system/media/$(local-density)/audio/* $(ZIP_DIR)/system/media/audio
+	$(hide) rm -rf $(ZIP_DIR)/system/media/audio/create_symlink_for_audio-timestamp
