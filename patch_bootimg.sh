@@ -14,12 +14,6 @@ cd $TARGET_BOOT_DIR/ramdisk
 cpio -i < ../boot.img-ramdisk
 cd - > /dev/null
 
-# Change init
-if [ ! -f $TARGET_BOOT_DIR/ramdisk/init_vendor ];then
-mv $TARGET_BOOT_DIR/ramdisk/init $TARGET_BOOT_DIR/ramdisk/init_vendor
-fi
-cp -f $PREBUILT_BOOT_DIR/$TARGET_BIT/init $TARGET_BOOT_DIR/ramdisk/init
-
 # ramdisk miui
 if [ -d overlay/boot/ramdisk ];then
 cp -rf overlay/boot/ramdisk/* $TARGET_BOOT_DIR/ramdisk/
