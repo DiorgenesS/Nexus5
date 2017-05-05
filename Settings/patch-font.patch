@@ -1,0 +1,23 @@
+From b238f309ab5815ac3d08152a6df25627d0ba7954 Mon Sep 17 00:00:00 2001
+From: Diorgenes <dyogenes_gd@hotmail.com>
+Date: Sat, 8 Apr 2017 19:15:23 -0300
+Subject: [PATCH] Enable font in Global version
+
+---
+ Settings/smali/com/android/settings/MiuiDisplaySettings.smali | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+--- a/Settings/smali/com/android/settings/MiuiDisplaySettings.smali
++++ b/Settings/smali/com/android/settings/MiuiDisplaySettings.smali
+@@ -571,7 +571,7 @@
+     invoke-virtual {v0, v5}, Lcom/android/settings/ai;->a(Lcom/android/settings/aj;)V
+ 
+     :cond_9
+-    sget-boolean v0, Lmiui/os/Build;->IS_GLOBAL_BUILD:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_a
+ 
+-- 
+2.7.4
+

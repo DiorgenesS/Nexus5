@@ -50,6 +50,8 @@ system/app/LatinIME/lib/arm 0 0 755 selabel=u:object_r:system_file:s0 capabiliti
 system/app/LatinIME/lib/arm/libjni_latinime.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/app/LiveWallpapersPicker 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/app/LiveWallpapersPicker/LiveWallpapersPicker.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/app/MiuiVideoPlayer 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/app/MiuiVideoPlayer/MiuiVideoPlayer.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/app/Music 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/app/Music/Music.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/app/NfcNci 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -634,14 +636,21 @@ system/fonts/ComingSoon.ttf 0 0 644 selabel=u:object_r:system_file:s0 capabiliti
 system/fonts/CutiveMono.ttf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/fonts/DancingScript-Bold.ttf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/fonts/DancingScript-Regular.ttf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/fonts/DroidNaskh-Regular-SystemUI.ttf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/fonts/DroidSans-Bold.ttf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/fonts/DroidSans.ttf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/fonts/DroidSansFallback.ttf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/fonts/DroidSansMono.ttf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/fonts/NanumGothic.ttf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/fonts/NotoColorEmoji.ttf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/fonts/NotoNaskh-Bold.ttf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/fonts/NotoNaskh-Regular.ttf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/fonts/NotoNaskhArabic-Bold.ttf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/fonts/NotoNaskhArabic-Regular.ttf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/fonts/NotoNaskhArabicUI-Bold.ttf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/fonts/NotoNaskhArabicUI-Regular.ttf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/fonts/NotoNaskhUI-Bold.ttf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/fonts/NotoNaskhUI-Regular.ttf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/fonts/NotoSansArmenian-Bold.ttf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/fonts/NotoSansArmenian-Regular.ttf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/fonts/NotoSansBalinese-Regular.ttf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -678,6 +687,8 @@ system/fonts/NotoSansGurmukhiUI-Regular.ttf 0 0 644 selabel=u:object_r:system_fi
 system/fonts/NotoSansHanunoo-Regular.ttf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/fonts/NotoSansHebrew-Bold.ttf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/fonts/NotoSansHebrew-Regular.ttf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/fonts/NotoSansHebrewUI-Bold.ttf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/fonts/NotoSansHebrewUI-Regular.ttf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/fonts/NotoSansJP-Regular.otf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/fonts/NotoSansJavanese-Regular.ttf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/fonts/NotoSansKR-Regular.otf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -1354,6 +1365,12 @@ system/media/audio/ui/VideoRecord.ogg 0 0 644 selabel=u:object_r:system_file:s0 
 system/media/audio/ui/WirelessChargingStarted.ogg 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/audio/ui/camera_click.ogg 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/audio/ui/camera_focus.ogg 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/media/theme/default 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/media/theme/default/com.android.systemui 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/media/theme/miui_mod_icons 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/media/theme/miui_mod_icons/com.android.settings_ex.png 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/media/theme/miui_mod_icons/com.dio.stocksettings.png 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/media/theme/miui_mod_icons/com.miui.videoplayer.png 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/BackupRestoreConfirmation 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/BackupRestoreConfirmation/BackupRestoreConfirmation.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -1400,6 +1417,8 @@ system/priv-app/ProxyHandler 0 0 755 selabel=u:object_r:system_file:s0 capabilit
 system/priv-app/ProxyHandler/ProxyHandler.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/Settings 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/Settings/Settings.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/priv-app/Settings_ex 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/priv-app/Settings_ex/Settings_ex.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/SettingsProvider 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/SettingsProvider/SettingsProvider.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/SharedStorageBackup 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -1408,6 +1427,8 @@ system/priv-app/Shell 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/Shell/Shell.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/StatementService 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/StatementService/StatementService.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/priv-app/StockSettings 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/priv-app/StockSettings/StockSettings.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/SystemUI 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/SystemUI/SystemUI.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/Tag 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -1677,6 +1698,5 @@ system/xbin/showslab 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0
 system/xbin/simpleperf 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/xbin/sqlite3 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/xbin/strace 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/xbin/su 0 2000 4750 selabel=u:object_r:su_exec:s0 capabilities=0x0
 system/xbin/taskstats 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/xbin/tcpdump 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
