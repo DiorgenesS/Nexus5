@@ -10,12 +10,15 @@ unmount("/data");
 unmount("/system");"""
       return
 
-def AddAssertions(info):
-   edify = info.script
-   for i in xrange(len(edify.script)):
-    if " ||" in edify.script[i] and ("ro.product.device" in edify.script[i] or "ro.build.product" in edify.script[i]):
-      edify.script[i] = edify.script[i].replace(" ||", ' ')
-      return
+def ModifyBegin(edify):
+    for i in xrange(len(edify.script)):
+        if 'ui_print("Target:' in edify.script[i] and "user/release-keys" in edify.script[i]:
+            edify.script[i] = '''ui_print("...");'''
+
+def ModifyCommand(edify):
+    for i in xrange(len(edify.script)):
+        if "package_extract_dir(" in edify.script[i] and "recovery" in edify.script[i]:
+            edify.script[i] = 'ui_print("Installing system...");'
 
 def ModifyMountData(edify):
     for i in xrange(len(edify.script)):
@@ -33,8 +36,6 @@ def AddPrompt(edify):
     for i in xrange(len(edify.script)):
         if 'mount("ext4' in edify.script[i] and 'by-name/system' in edify.script[i]:
             edify.script[i] = 'ui_print("Formating Partitions...");\n' + edify.script[i]
-        elif 'package_extract_dir("system"' in edify.script[i]:
-            edify.script[i] = 'ui_print("Installing system...");\n' + edify.script[i]
         elif 'symlink("../ui/MessageComplete.ogg' in edify.script[i]:
             edify.script[i] = 'ui_print("Creating symlinks...");\n' + edify.script[i]
         elif 'set_metadata_recursive("/system"' in edify.script[i]:
@@ -52,10 +53,12 @@ def WritePolicyConfig(info):
 
 def FullOTA_InstallEnd(info):
     edify = info.script
-    AddPrompt(edify)
-    ModifyMountData(edify)
-    WritePolicyConfig(info)
     RemoveDeviceAssert(info)
+    ModifyBegin(edify)
+    ModifyCommand(edify)
+    ModifyMountData(edify)
+    AddPrompt(edify)
+    WritePolicyConfig(info)
 
 def IncrementalOTA_InstallEnd(info):
     RemoveDeviceAssert(info)
