@@ -23,6 +23,7 @@ name="framework-res.apk.apk" certificate="build/target/product/security/platform
 name="framework-res.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"
 name="FusedLocation.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"
 name="Gallery2.apk" certificate="PRESIGNED" private_key=""
+name="GoogleCamera.apk" certificate="PRESIGNED" private_key=""
 name="HTMLViewer.apk" certificate="PRESIGNED" private_key=""
 name="InputDevices.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"
 name="KeyChain.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"
