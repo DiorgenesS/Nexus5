@@ -7,13 +7,11 @@ private-phone-apps := \
 	BluetoothMidiService \
 	CertInstaller \
 	KeyChain \
-	LatinIME \
 	NfcNci \
 	PacProcessor \
 	PrintSpooler \
 	qcrilmsgtunnel \
-	UserDictionaryProvider \
-	webview 
+	UserDictionaryProvider 
 
 private-phone-priv-apps := \
 	BackupRestoreConfirmation \

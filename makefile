@@ -65,6 +65,7 @@ local-pre-zip-misc:
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libjni_filtershow_filters.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libjni_jpegstream.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libjni_jpegutil.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libjni_latinime.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libjni_tinyplanet.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/librsjni.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libminivenus.so
