@@ -6,6 +6,7 @@ private-phone-apps := \
 	Bluetooth \
 	BluetoothMidiService \
 	CertInstaller \
+	DocumentsUI \
 	KeyChain \
 	NfcNci \
 	PacProcessor \
