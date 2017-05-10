@@ -34,6 +34,7 @@ private-phone-priv-apps := \
 	OmaDmclient \
 	ProxyHandler \
 	Screencast \
+	Snap \
 	SharedStorageBackup \
 	Shell \
 	StatementService 
