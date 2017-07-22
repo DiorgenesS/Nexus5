@@ -4,27 +4,73 @@ Date: Mon, 17 Apr 2017 21:47:50 -0300
 Subject: [PATCH] patch for "Independent settings", necessary for futures mods
 
 ---
- .../res/layout/color_preference_layout.xml         | 24 ++++++++++++++++++++++
- .../res/layout/launch_preference_app_icon.xml      |  5 +++++
- .../res/layout/launch_preference_item.xml          | 11 ++++++++++
- .../res/layout/launch_preference_layout.xml        |  7 +++++++
- .../res/layout/seekbar_preference_layout.xml       |  6 ++++++
+ framework-res/res/drawable/hint_seekbar.xml        |  6 +++++
+ .../res/layout-land/color_preference_layout.xml    | 27 ++++++++++++++++++++++
+ .../res/layout/color_preference_layout.xml         | 24 +++++++++++++++++++
+ .../res/layout/launch_preference_app_icon.xml      |  5 ++++
+ .../res/layout/launch_preference_item.xml          | 11 +++++++++
+ .../res/layout/launch_preference_layout.xml        |  7 ++++++
+ framework-res/res/layout/seekbar_hint_layout.xml   |  5 ++++
+ .../res/layout/seekbar_preference_layout.xml       |  6 +++++
  framework-res/res/values/strings.xml               |  2 ++
- 6 files changed, 55 insertions(+)
+ 9 files changed, 93 insertions(+)
 
+
+--- /dev/null
++++ b/framework-res/res/drawable/hint_seekbar.xml
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="utf-8"?>
++<shape
++  xmlns:android="http://schemas.android.com/apk/res/android">
++    <solid android:color="#ee666666" />
++    <corners android:radius="2.0dip" />
++</shape>
+\ No newline at end of file
+
+--- /dev/null
++++ b/framework-res/res/layout-land/color_preference_layout.xml
+@@ -0,0 +1,27 @@
++<?xml version="1.0" encoding="utf-8"?>
++<LinearLayout android:orientation="horizontal" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
++  xmlns:android="http://schemas.android.com/apk/res/android">
++    <android.preference.MiuiColorPickerView android:id="@+id/color_picker_view" android:tag="landscape" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layerType="software" />
++    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip">
++    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/text_hex_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" android:weightSum="1.0">
++        <TextView android:textSize="20.0sp" android:id="@+id/hex_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="Hex:" />
++        <EditText android:id="@+id/hex" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="ff000000" />
++        <ImageButton android:gravity="center" android:id="@+id/enter" android:background="@color/transparent" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:src="@drawable/ic_cab_done_holo_light" />
++    </LinearLayout>
++        <android.preference.MiuiColorPickerPanelView android:id="@+id/old_color_panel" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_weight="0.5" />
++        <TextView android:textAppearance="?textAppearanceSmall" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:layout_marginBottom="5.0dip" android:text="@string/press_color_to_apply" />
++        <TextView android:textSize="20.0sp" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="↓" />
++        <android.preference.MiuiColorPickerPanelView android:id="@+id/new_color_panel" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_weight="0.5" />
++        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="10.0dip" android:layout_marginBottom="10.0dip" />
++        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="40.0dip" android:layout_marginBottom="10.0dip">
++            <android.preference.MiuiColorPickerPanelView android:id="@+id/white_panel" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_marginRight="6.0dip" android:layout_weight="0.5" />
++            <android.preference.MiuiColorPickerPanelView android:id="@+id/black_panel" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_marginRight="6.0dip" android:layout_weight="0.5" />
++            <android.preference.MiuiColorPickerPanelView android:id="@+id/blue_panel" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_marginRight="6.0dip" android:layout_weight="0.5" />
++        </LinearLayout>
++        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="40.0dip" android:layout_marginBottom="10.0dip">
++            <android.preference.MiuiColorPickerPanelView android:id="@+id/red_panel" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_marginRight="6.0dip" android:layout_weight="0.5" />
++            <android.preference.MiuiColorPickerPanelView android:id="@+id/green_panel" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_marginRight="6.0dip" android:layout_weight="0.5" />
++            <android.preference.MiuiColorPickerPanelView android:id="@+id/yellow_panel" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_marginRight="6.0dip" android:layout_weight="0.5" />
++        </LinearLayout>
++    </LinearLayout>
++</LinearLayout>
+\ No newline at end of file
 
 --- /dev/null
 +++ b/framework-res/res/layout/color_preference_layout.xml
 @@ -0,0 +1,24 @@
 +<?xml version="1.0" encoding="utf-8"?>
-+<LinearLayout android:orientation="vertical" android:id="@+id/dialog_color_picker" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
++<LinearLayout android:orientation="vertical" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
 +  xmlns:android="http://schemas.android.com/apk/res/android">
-+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip">
-+        <TextView android:textSize="20.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="Hex:" />
-+        <EditText android:id="@+id/hex" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="ff000000" />
-+        <ImageButton android:gravity="center" android:id="@+id/enter" android:background="@color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:src="@drawable/ic_cab_done_holo_light" />
++    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/text_hex_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip">
++        <TextView android:textSize="20.0sp" android:id="@+id/hex_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="Hex:" />
++        <EditText android:id="@+id/hex" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="ff000000" />
++        <ImageButton android:gravity="center" android:id="@+id/enter" android:background="@color/transparent" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:src="@drawable/ic_cab_done_holo_light" />
 +    </LinearLayout>
-+    <android.preference.MiuiColorPickerView android:id="@+id/color_picker_view" android:tag="portrait" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
++    <android.preference.MiuiColorPickerView android:id="@+id/color_picker_view" android:tag="portrait" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layerType="software" />
 +    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="30.0dip" android:layout_marginLeft="7.0dip" android:layout_marginTop="2.0dip" android:layout_marginRight="7.0dip">
 +        <android.preference.MiuiColorPickerPanelView android:id="@+id/white_panel" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_marginRight="6.0dip" android:layout_weight="0.5" />
 +        <android.preference.MiuiColorPickerPanelView android:id="@+id/black_panel" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_marginRight="6.0dip" android:layout_weight="0.5" />
@@ -81,13 +127,23 @@ Subject: [PATCH] patch for "Independent settings", necessary for futures mods
 \ No newline at end of file
 
 --- /dev/null
++++ b/framework-res/res/layout/seekbar_hint_layout.xml
+@@ -0,0 +1,5 @@
++<?xml version="1.0" encoding="utf-8"?>
++<LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@drawable/hint_seekbar" android:layout_width="wrap_content" android:layout_height="wrap_content"
++  xmlns:android="http://schemas.android.com/apk/res/android">
++    <TextView android:textSize="10.0sp" android:textColor="#ffffffff" android:ellipsize="end" android:id="@+id/HintText" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
++</LinearLayout>
+\ No newline at end of file
+
+--- /dev/null
 +++ b/framework-res/res/layout/seekbar_preference_layout.xml
 @@ -0,0 +1,6 @@
 +<?xml version="1.0" encoding="utf-8"?>
-+<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingRight="?scrollbarSize" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?listPreferredItemHeight"
++<LinearLayout android:gravity="bottom" android:orientation="vertical" android:paddingRight="?scrollbarSize" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="1.0" android:minHeight="?listPreferredItemHeight"
 +  xmlns:android="http://schemas.android.com/apk/res/android">
-+    <SeekBar android:id="@+id/seekbar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" />
-+    <TextView android:textAppearance="?textAppearanceSmall" android:textColor="?textColorSecondary" android:gravity="center" android:id="@+id/seekbar_textview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" />
++    <android.preference.MiuiSeekBar android:id="@+id/miui_seekbar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foregroundGravity="center" android:layout_marginStart="6.0dip" android:layout_marginEnd="6.0dip" />
++    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="20.0dip" />
 +</LinearLayout>
 \ No newline at end of file
 

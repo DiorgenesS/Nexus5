@@ -19,14 +19,14 @@ if [ -a $TARGET_BOOT_DIR/ramdisk/res ];then
 rm -rf $TARGET_BOOT_DIR/ramdisk/res
 fi
 
-# ramdisk miui
-if [ -d overlay/boot/ramdisk ];then
-cp -rf overlay/boot/ramdisk/* $TARGET_BOOT_DIR/ramdisk/
-fi
-
 # remove  init.superuser.rc
 if [ -a $TARGET_BOOT_DIR/ramdisk/init.superuser.rc ];then
 rm -rf $TARGET_BOOT_DIR/ramdisk/init.superuser.rc
+fi
+
+# ramdisk miui
+if [ -d overlay/boot/ramdisk ];then
+cp -rf overlay/boot/ramdisk/* $TARGET_BOOT_DIR/ramdisk/
 fi
 
 # repack ramdisk

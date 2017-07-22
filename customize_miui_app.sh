@@ -67,10 +67,6 @@ if [ $1 = "Settings" ];then
     applyPatch $1 $2
 fi
 
-if [ $1 = "TeleService" ];then
-    applyPatch $1 $2
-fi
-
 if [ $1 = "XiaomiAccount" ];then
     applyPatch $1 $2
 	sed -i '/- 16/a\sdkInfo:\n  minSdkVersion: '\''23'\''\n  targetSdkVersion: '\''23'\''' $2/apktool.yml

@@ -54,10 +54,6 @@
     <bool name="support_app_hiding">false</bool>
     <!--whether the device can read cpu4 freq-->
     <bool name="is_read_cpu4_freq">false</bool>
-    <!--whether the device supports cit-->
-    <bool name="support_cit">true</bool>
-    <!--whether the device is xiaomi-->
-    <bool name="is_xiaomi_device">false</bool>
     <!--the vendor feature, it's value may be qcom,mediatek,leadcore or nvidia-->
     <string name="vendor">google</string>
     <!--b0:flash b1:hdr b2:motion b3:night-->
