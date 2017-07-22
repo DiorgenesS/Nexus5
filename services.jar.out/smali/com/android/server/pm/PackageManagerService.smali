@@ -58089,7 +58089,7 @@
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/pm/PackageManagerService;->generateApplicationInfoFromSettingsLPw(Ljava/lang/String;II)Landroid/content/pm/ApplicationInfo;
 
     move-result-object v0
-    
+
     :cond_miui_2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
